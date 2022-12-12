@@ -457,3 +457,180 @@
   display: block;
 }
 /* end recommend */
+
+/* playground start */
+/* playground-header */
+.playground-header .header-title {
+  float: left;
+  width: 826px;
+}
+.playground-header .more-product {
+  float: right;
+}
+.playground-header .more-product a {
+  display: block;
+  width: 118px;
+  height: 42px;
+  border: 1px solid #BABABA;
+  opacity: 0.35;
+  border-radius: 20px;
+  line-height: 42px;
+  text-align: center;
+  color: rgb(0, 0, 0);
+  margin-top: 12px;
+}
+.playground-header .more-product a:hover {
+  border-color: #000;
+  color: #000;
+}
+.playground-header .header-title h2{
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.playground-header .header-title p {
+  line-height: 21px;
+}
+
+/* playground-content */
+.playground-content {
+  margin-top: 32px;
+  margin-bottom: 40px;
+}
+.playground-content .con-l {
+  position: relative;
+  float: left;
+  width: 610px;
+  height: 715px;
+  background-image: url(../images/playground-1.png);
+}
+.playground-content .con-m, .con-r {
+  float: left;
+  padding-left: 13px;
+  width: 295px;
+  height: 715px;
+}
+.playground-content .con-m .con-m-1{
+  position: relative;
+  width: 295px;
+  height: 295px;
+  margin-bottom: 20px;
+  background-image: url(../images/playground-2.png);
+  background-size: cover;
+}
+.playground-content .con-m .con-m-2 {
+  position: relative;
+  width: 295px;
+  height: 400px;
+  background-image: url(../images/playground-3.png);
+  background-size: cover;
+}
+.playground-content .con-r .con-r-1 {
+  width: 295px;
+  height: 400px;
+  margin-bottom: 20px;
+  background-image: url(../images/playground-5.png);
+  background-size: cover;
+
+}
+.playground-content .con-r .con-r-2 {
+  width: 295px;
+  height: 295px;
+  background-image: url(../images/playground-4.png);
+  background-size: cover;
+
+}
+
+/* 小圆点 */
+.playground-dot {
+  position: absolute;
+  display: none;
+  /* width: 32px; */
+  width: 42px;
+  height: 32px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  color: #333;
+}
+
+.playground-content .con-l:hover .playground-dot, 
+.playground-content .con-m-1:hover .playground-dot, 
+.playground-content .con-m-2:hover .playground-dot {
+  display: block;
+}
+
+.playground-dot-1{
+  top: 249px;
+  left: 248px;
+}
+.playground-dot-2 {
+  top: 359px;
+  left: 128px;
+}
+.playground-dot-3 {
+  top: 460px;
+  left: 71px;
+}
+.playground-dot-4 {
+  top: 152px;
+  left: 52px;
+}
+.playground-dot-5 {
+  top: 284px;
+  left: 80px;
+}
+/* 外圈圆 */
+.playground-dot::before {
+  content: '';
+  display: block;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  transition: transform ease 0.5s;
+}
+.playground-dot:hover::before {
+  transform: scale(0.9);
+  box-shadow: 0 0 5px #fff;
+}
+/* 内圈圆 */
+.playground-dot::after {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  content: '';
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: transform ease 0.5s;
+}
+.playground-dot:hover::after {
+  transform: scale(0.7);
+}
+
+.playground-dot-tips {
+  position: absolute;
+  top: -30px;
+  left: 40px;
+  width: 170px;
+  background-color: #fff;
+  padding: 10px;
+  display: none;
+}
+.playground-dot-tips h3{
+  font-weight: bold;
+}
+.playground-dot-tips span {
+  font-size: 24px;
+  font-weight: bold;
+}
+.playground-dot-tips span>i {
+  font-size: 12px;
+  font-style: italic;
+}
+.playground-dot:hover .playground-dot-tips {
+  display: block;
+}
+/* end playground */
