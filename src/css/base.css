@@ -8,6 +8,9 @@ body {
   background-color: #fff;
   min-width: 1226px;
 }
+a {
+  color: #333;
+}
 .container{
   width: 1226px;
   margin: 0 auto;
