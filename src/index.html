@@ -623,7 +623,7 @@
 			<!-- end videos -->
 
 			<!-- mall start -->
-			<section class="mall container">
+			<section class="mall container clearfix">
 				<h2>手机商城 - 推荐信息</h2>
 				<ul>
 					<li>
@@ -719,8 +719,125 @@
 				</ul>
 			</section>
 			<!-- end mall -->
+
+			<!-- accordion start -->
+			<section class="accordion">
+				<div class="container clearfix">
+					<h2>
+						<img src="./images/logo-3.png" alt="" width="130" height="44" />
+					</h2>
+					<ul>
+						<li class="active">
+							<a href="javascript:;">
+								<img src="./images/a-1.png" alt="" width="361" height="270" />
+								<h3>清心美女</h3>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<img src="./images/a-2.png" alt="" width="361" height="270" />
+								<h3>父亲节快乐</h3>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<img src="./images/a-3.png" alt="" width="361" height="270" />
+								<h3>秋天来了</h3>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<img src="./images/a-4.png" alt="" width="361" height="270" />
+								<h3>小奶猫</h3>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<img src="./images/a-5.png" alt="" width="361" height="270" />
+								<h3>下午茶</h3>
+							</a>
+						</li>
+						<li>
+							<a href="javascript:;">
+								<img src="./images/a-6.png" alt="" width="361" height="270" />
+								<h3>海阔天空</h3>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- end accordion -->
 		</main>
 		<!-- end main -->
+		<footer class="site-footer container">
+			<div class="footer-service">
+				<ul class="clearfix">
+					<li>
+						<i class="iconfont icon-banshou"></i>
+						<a href="#">预约维修服务</a>
+					</li>
+					<li>
+						<i class="iconfont icon-7tianwuliyoutuihuo"></i>
+						<a href="#">7天无理由退货</a>
+					</li>
+					<li>
+						<i class="iconfont icon-15tianwuliyoutuihuo"></i>
+						<a href="#">15天免费换货</a>
+					</li>
+					<li>
+						<i class="iconfont icon-liwu"></i>
+						<a href="#">满69元包邮</a>
+					</li>
+					<li>
+						<i class="iconfont icon-31dingwei"></i>
+						<a href="#">1100余家售后网点</a>
+					</li>
+				</ul>
+			</div>
+			<div class="footer-links clearfix">
+				<dl>
+					<dt>选购指南</dt>
+					<dd><a href="#">手机</a></dd>
+					<dd><a href="#">电视</a></dd>
+					<dd><a href="#">笔记本</a></dd>
+				</dl>
+				<dl>
+					<dt>服务中心</dt>
+					<dd><a href="#">申请售后</a></dd>
+					<dd><a href="#">售后政策</a></dd>
+					<dd><a href="#">维修服务价格</a></dd>
+				</dl>
+				<dl>
+					<dt>线下门店</dt>
+					<dd><a href="#">Mini之家</a></dd>
+					<dd><a href="#">授权体验店/专区</a></dd>
+					<dd><a href="#">服务网点</a></dd>
+				</dl>
+				<dl>
+					<dt>关于迷你</dt>
+					<dd><a href="#">了解mini</a></dd>
+					<dd><a href="#">加入mini</a></dd>
+					<dd><a href="#">投资者关系</a></dd>
+				</dl>
+				<dl>
+					<dt>关注我们</dt>
+					<dd><a href="#">新浪微博</a></dd>
+					<dd><a href="#">官方微信</a></dd>
+					<dd><a href="#">联系我们</a></dd>
+				</dl>
+				<div class="telephone">
+					<p class="phone">400-123-4567</p>
+					<p>8:00-18:00（仅收市话费）</p>
+					<a href="#">
+						<em class="iconfont icon-duanxin"></em>
+						人工客服
+					</a>
+				</div>
+			</div>
+			<div class="copyright">
+				ICODINGEDU | Copyright © 2019-present Arry | 陕 ICP 备 2022004903 号-1
+			</div>
+		</footer>
 		<!-- v-mask start -->
 		<div class="v-mask">
 			<div class="mask-video">
@@ -792,6 +909,20 @@
 					mask[0].style.display = "none";
 					videoObj.pause();
 				};
+			})();
+
+			// 手风琴
+			(function () {
+				var ali = document.querySelectorAll(".accordion ul li");
+				for (let i = 0; i < ali.length; i++) {
+					ali[i].onmouseover = function () {
+						for (let j = 0; j < ali.length; j++) {
+							// ali[j].className = "";
+							ali[j].classList.remove("active");
+						}
+						this.classList.add("active");
+					};
+				}
 			})();
 		</script>
 	</body>
