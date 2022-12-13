@@ -160,6 +160,7 @@
 			</div>
 			<!-- end site-header -->
 		</header>
+
 		<!-- main start -->
 		<main>
 			<!-- focus-slider start -->
@@ -256,6 +257,7 @@
 				</div>
 			</section>
 			<!-- end focus-slider -->
+
 			<!-- recommend start -->
 			<section class="recommend">
 				<div class="index-banner">
@@ -447,6 +449,7 @@
 				</div>
 			</section>
 			<!-- end recommend -->
+
 			<!-- playground start -->
 			<section class="playground container">
 				<div class="playground-header clearfix">
@@ -512,44 +515,186 @@
 				</div>
 			</section>
 			<!-- end playground -->
+
+			<!-- videos start -->
+			<section class="videos">
+				<div class="container">
+					<h2>手机商城 - 精彩视频</h2>
+					<ul class="clearfix">
+						<li data-video-url="./videos/video-1.mp4">
+							<a href="javacript:;">
+								<img
+									src="./images/video-1.png"
+									alt=""
+									width="302"
+									height="190"
+								/>
+								<p>巨族 18X</p>
+								<span class="video-play"></span>
+							</a>
+						</li>
+						<li data-video-url="./videos/video-2.mp4">
+							<a href="javacript:;">
+								<img
+									src="./images/video-2.png"
+									alt=""
+									width="302"
+									height="190"
+								/>
+								<p>巨族 18 Pro</p>
+								<span class="video-play"></span>
+							</a>
+						</li>
+						<li data-video-url="./videos/video-3.mp4">
+							<a href="javacript:;">
+								<img
+									src="./images/video-3.png"
+									alt=""
+									width="302"
+									height="190"
+								/>
+								<p>巨族 18X</p>
+								<span class="video-play"></span>
+							</a>
+						</li>
+						<li data-video-url="./videos/video-4.mp4">
+							<a href="javacript:;">
+								<img
+									src="./images/video-4.png"
+									alt=""
+									width="302"
+									height="190"
+								/>
+								<p>Lipro 智能家居</p>
+								<span class="video-play"></span>
+							</a>
+						</li>
+						<li data-video-url="./videos/video-5.mp4">
+							<a href="javacript:;">
+								<img
+									src="./images/video-5.png"
+									alt=""
+									width="302"
+									height="190"
+								/>
+								<p>Plyme 9 功能视频</p>
+								<span class="video-play"></span>
+							</a>
+						</li>
+						<li data-video-url="./videos/video-6.mp4">
+							<a href="javacript:;">
+								<img
+									src="./images/video-6.png"
+									alt=""
+									width="302"
+									height="190"
+								/>
+								<p>Plyme 8 概念视频</p>
+								<span class="video-play"></span>
+							</a>
+						</li>
+						<li data-video-url="./videos/video-7.mp4">
+							<a href="javacript:;">
+								<img
+									src="./images/video-7.png"
+									alt=""
+									width="302"
+									height="190"
+								/>
+								<p>Aicy</p>
+								<span class="video-play"></span>
+							</a>
+						</li>
+						<li data-video-url="./videos/video-8.mp4">
+							<a href="javacript:;">
+								<img
+									src="./images/video-8.png"
+									alt=""
+									width="302"
+									height="190"
+								/>
+								<p>安全家庭</p>
+								<span class="video-play"></span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- end videos -->
 		</main>
 		<!-- end main -->
+		<!-- v-mask start -->
+		<div class="v-mask">
+			<div class="mask-video">
+				<video controls src="./videos/video-1.mp4" class="video" width="1000">
+					抱歉，您的浏览器不支持video
+				</video>
+				<span class="mask-close">X</span>
+			</div>
+		</div>
+		<!-- end v-mask -->
 
 		<!-- swiper class libary -->
 		<script src="./js/swiper-bundle.min.js"></script>
 		<script>
 			// Initialize Swiper
-			var swiper = new Swiper('.mySwiper', {
+			var swiper = new Swiper(".mySwiper", {
 				spaceBetween: 30,
-				effect: 'fade',
+				effect: "fade",
 				navigation: {
-					nextEl: '.swiper-button-next',
-					prevEl: '.swiper-button-prev',
+					nextEl: ".swiper-button-next",
+					prevEl: ".swiper-button-prev",
 				},
 				pagination: {
-					el: '.swiper-pagination',
+					el: ".swiper-pagination",
 					clickable: true,
 				},
 				loop: true,
 				autoplay: true,
-			})
+			});
 
 			// 歌单推荐选项卡切换
-			;(function () {
-				var tabList = document.querySelectorAll('.m-tab a')
-				var item = document.querySelectorAll('.music-item .m-list')
+			(function () {
+				var tabList = document.querySelectorAll(".m-tab a");
+				var item = document.querySelectorAll(".music-item .m-list");
 				for (let i = 0; i < item.length; i++) {
-					tabList[i].index = i
+					tabList[i].index = i;
 					tabList[i].onmouseover = function () {
 						for (let j = 0; j < item.length; j++) {
-							tabList[j].className = ''
-							item[j].className = 'm-list'
+							tabList[j].className = "";
+							item[j].className = "m-list";
 						}
-						tabList[this.index].className = 'active'
-						item[this.index].className = 'm-list current'
-					}
+						tabList[this.index].className = "active";
+						item[this.index].className = "m-list current";
+					};
 				}
-			})()
+			})();
+
+			// 视频弹窗
+			(function () {
+				// 获取视频url列表
+				var vli = document.querySelectorAll(".videos ul li");
+				// 获取video对象
+				var videoObj = document.querySelector(".v-mask .mask-video video");
+				// 获取弹窗
+				var mask = document.getElementsByClassName("v-mask");
+				// 获取关闭按钮
+				var closeBtn = document.querySelector(
+					".v-mask .mask-video .mask-close"
+				);
+				for (let i = 0; i < vli.length; i++) {
+					vli[i].onclick = function () {
+						var value = this.getAttribute("data-video-url");
+						videoObj.setAttribute("src", value);
+						mask[0].style.display = "block";
+						videoObj.play();
+					};
+				}
+				closeBtn.onclick = function () {
+					mask[0].style.display = "none";
+					videoObj.pause();
+				};
+			})();
 		</script>
 	</body>
 </html>

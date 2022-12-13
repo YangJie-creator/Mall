@@ -634,3 +634,90 @@
   display: block;
 }
 /* end playground */
+
+/* videos start */
+.videos {
+  background-color: #F8F8F8;
+  padding-top: 34px;
+  padding-bottom: 40px;
+}
+.videos h2 {
+  font-size: 28px;
+  text-align: center;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 32px;
+}
+.videos ul li {
+  float: left;
+  margin-right: 6px;
+  margin-bottom: 10px;
+}
+.videos ul li:nth-child(4n) {
+  margin-right: 0;
+}
+.videos ul li a {
+  position: relative;
+  display: block;
+  background-color: #fff;
+  color: #333;
+  transition: box-shadow ease 0.5s;
+}
+.videos ul li a:hover {
+  box-shadow: 5px 5px 10px #ddd;
+}
+.videos ul li a img {
+  display: block;
+}
+.videos ul li p {
+  font-size: 16px;
+  height: 55px;
+  line-height: 55px;
+  text-align: center;
+}
+/* 视频播放按钮 */
+.video-play {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  bottom: 70px;
+  right: 13px;
+  background-image: url(../images/video-play.png);
+  background-size: cover;
+}
+
+/* end videos */
+/* v-mask start */
+.v-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 9999;
+  display: none;
+}
+.v-mask .mask-video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.v-mask .mask-close {
+  position: absolute;
+  top: -15px;
+  right: -15px;
+  width: 30px;
+  height: 30px;
+  background-color: #BABABA;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 30px;
+  cursor: pointer;
+  font-size: 18px;
+}
+.v-mask .mask-close:hover {
+  background-color: #fff;
+}
+/* end v-mask */
